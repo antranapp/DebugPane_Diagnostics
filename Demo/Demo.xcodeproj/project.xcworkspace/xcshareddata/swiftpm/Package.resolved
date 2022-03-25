@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "DebugPane",
+        "repositoryURL": "https://github.com/antranapp/DebugPane",
+        "state": {
+          "branch": "master",
+          "revision": "779f7ce897859aeb99f7aaf9ac8709edacad7305",
+          "version": null
+        }
+      },
+      {
+        "package": "Diagnostics",
+        "repositoryURL": "https://github.com/WeTransfer/Diagnostics.git",
+        "state": {
+          "branch": null,
+          "revision": "5c6c587955fc3c9196c81b4ef78dc435de149580",
+          "version": "3.0.0"
+        }
+      },
+      {
+        "package": "swift-log",
+        "repositoryURL": "https://github.com/apple/swift-log",
+        "state": {
+          "branch": null,
+          "revision": "5d66f7ba25daf4f94100e7022febf3c75e37a6c7",
+          "version": "1.4.2"
+        }
+      },
+      {
+        "package": "TweakPane",
+        "repositoryURL": "https://github.com/antranapp/TweakPane",
+        "state": {
+          "branch": "master",
+          "revision": "d9627f8b172d4ae10213c2d8718b128bd67ea322",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
