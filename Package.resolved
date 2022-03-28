@@ -12,20 +12,11 @@
       },
       {
         "package": "Diagnostics",
-        "repositoryURL": "https://github.com/antranapp/Diagnostics.git",
-        "state": {
-          "branch": "convert_staticstring_to_string",
-          "revision": "a6c107550adedf09c72f7b0611646aec3f9431cf",
-          "version": null
-        }
-      },
-      {
-        "package": "ExceptionCatcher",
-        "repositoryURL": "https://github.com/sindresorhus/ExceptionCatcher",
+        "repositoryURL": "https://github.com/WeTransfer/Diagnostics.git",
         "state": {
           "branch": null,
-          "revision": "9d99a736e17f67ab3aa333c0dad7ed2ee9d6b2b9",
-          "version": "2.0.0"
+          "revision": "5c6c587955fc3c9196c81b4ef78dc435de149580",
+          "version": "3.0.0"
         }
       },
       {

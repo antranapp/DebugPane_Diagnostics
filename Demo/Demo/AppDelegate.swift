@@ -1,14 +1,14 @@
 //
-// Copyright © 2022 An Tran. All rights reserved.
+// Copyright © 2021 An Tran. All rights reserved.
 //
 
 import Combine
 import DebugPane
 import DebugPane_Diagnostics
+import Diagnostics
 import Logging
 import SwiftUI
 import UIKit
-import Diagnostics
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,8 +16,9 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private var bag = Set<AnyCancellable>()
     
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        LoggingSystem.bootstrap(DiagnosticsLogHandler.init)
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = ViewController()

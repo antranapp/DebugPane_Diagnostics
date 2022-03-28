@@ -1,14 +1,16 @@
 //
-// Copyright © 2022 An Tran. All rights reserved.
+// Copyright © 2021 An Tran. All rights reserved.
 //
 
 import Combine
+import Diagnostics
 import Logging
 import SwiftUI
 import UIKit
-import Diagnostics
 
 final class ViewController: UIViewController {
+    
+    var logger = Logger(label: "app.antran")
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -53,6 +55,6 @@ final class ViewController: UIViewController {
     }
     
     @objc func didTapButton() {
-        DiagnosticsLogger.log(message: "Some log")
+        logger.log(level: .info, "Native Swift log message")
     }
 }

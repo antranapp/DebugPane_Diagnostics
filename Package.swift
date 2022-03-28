@@ -10,7 +10,8 @@ let package = Package(
     products: [
         .library(
             name: "DebugPane_Diagnostics",
-            targets: ["DebugPane_Diagnostics"]),
+            targets: ["DebugPane_Diagnostics"]
+        ),
     ],
     dependencies: [
         .package(
@@ -18,16 +19,21 @@ let package = Package(
             .branch("master")
         ),
         .package(
-            url: "https://github.com/WeTransfer/Diagnostics.git",
-            .upToNextMajor(from: "3.0.0")
-        )
+            url: "https://github.com/antranapp/Diagnostics.git",
+            .branch("convert_staticstring_to_string")
+        ),
+        .package(
+            url: "https://github.com/apple/swift-log",
+            .upToNextMajor(from: "1.4.2")
+        ),
     ],
     targets: [
         .target(
             name: "DebugPane_Diagnostics",
             dependencies: [
                 "DebugPane",
-                "Diagnostics"
+                "Diagnostics",
+                .product(name: "Logging", package: "swift-log"),
             ]
         ),
         .testTarget(

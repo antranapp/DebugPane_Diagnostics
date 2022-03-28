@@ -1,12 +1,9 @@
 //
-//  File.swift
-//  
-//
-//  Created by Binh An Tran on 25/3/22.
+// Copyright © 2021 An Tran. All rights reserved.
 //
 
-import SwiftUI
 import MessageUI
+import SwiftUI
 import UIKit
 
 // https://stackoverflow.com/questions/56784722/swiftui-send-email
@@ -22,14 +19,16 @@ public struct MailView: UIViewControllerRepresentable {
         @Binding var result: Result<MFMailComposeResult, Error>?
 
         init(presentation: Binding<PresentationMode>,
-             result: Binding<Result<MFMailComposeResult, Error>?>) {
+             result: Binding<Result<MFMailComposeResult, Error>?>)
+        {
             _presentation = presentation
             _result = result
         }
 
         public func mailComposeController(_ controller: MFMailComposeViewController,
                                           didFinishWith result: MFMailComposeResult,
-                                          error: Error?) {
+                                          error: Error?)
+        {
             defer {
                 $presentation.wrappedValue.dismiss()
             }
@@ -42,8 +41,10 @@ public struct MailView: UIViewControllerRepresentable {
     }
 
     public func makeCoordinator() -> Coordinator {
-        return Coordinator(presentation: presentation,
-                           result: $result)
+        return Coordinator(
+            presentation: presentation,
+            result: $result
+        )
     }
 
     public func makeUIViewController(context: UIViewControllerRepresentableContext<MailView>) -> MFMailComposeViewController {
@@ -55,6 +56,6 @@ public struct MailView: UIViewControllerRepresentable {
 
     public func updateUIViewController(
         _ uiViewController: MFMailComposeViewController,
-        context: UIViewControllerRepresentableContext<MailView>) {
-    }
+        context: UIViewControllerRepresentableContext<MailView>
+    ) {}
 }
