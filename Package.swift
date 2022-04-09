@@ -19,8 +19,8 @@ let package = Package(
             .branch("master")
         ),
         .package(
-            url: "https://github.com/antranapp/Diagnostics.git",
-            .branch("convert_staticstring_to_string")
+            url: "https://github.com/WeTransfer/Diagnostics",
+            .upToNextMajor(from: "4.0.0")
         ),
         .package(
             url: "https://github.com/apple/swift-log",
