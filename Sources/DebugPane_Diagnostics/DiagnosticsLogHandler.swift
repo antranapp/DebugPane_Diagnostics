@@ -30,7 +30,17 @@ public struct DiagnosticsLogHandler: LogHandler {
             mergedMetadata[key] = value // Override keys if necessary
         }
 
-        DiagnosticsLogger.log(message: "[\(level)]: \(message.description)", file: file, function: function, line: line)
+        DiagnosticsLogger.log(message: "[\(level)]: \(message.description)\n\(mergedMetadata)", file: file, function: function, line: line)
     }
 
+}
+
+extension Dictionary where Key: CustomDebugStringConvertible, Value: CustomDebugStringConvertible {
+    private var prettyPrint: String {
+        var result = ""
+        for (key,value) in self {
+            result += "\(key) = \(value)\n"
+        }
+        return result
+    }
 }

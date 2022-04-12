@@ -24,14 +24,8 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = ViewController()
         window?.makeKeyAndVisible()
     
-        DebugPane.start {
+        DebugPane.start(setup: [DiagnosticsBlade.setup]) {
             DiagnosticsBlade(presentingViewController: { self.window?.rootViewController?.topMostViewController() })
-        }
-
-        do {
-            try DiagnosticsLogger.setup()
-        } catch {
-            print("Failed to setup the Diagnostics Logger")
         }
 
         DiagnosticsLogger.log(message: "App Started")

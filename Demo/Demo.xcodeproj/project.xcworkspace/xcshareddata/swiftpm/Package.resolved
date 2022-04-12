@@ -6,17 +6,17 @@
         "repositoryURL": "https://github.com/antranapp/DebugPane",
         "state": {
           "branch": "master",
-          "revision": "779f7ce897859aeb99f7aaf9ac8709edacad7305",
+          "revision": "8ba950b30732e6732b42241ba134c2969aa71381",
           "version": null
         }
       },
       {
         "package": "Diagnostics",
-        "repositoryURL": "https://github.com/antranapp/Diagnostics.git",
+        "repositoryURL": "https://github.com/WeTransfer/Diagnostics",
         "state": {
-          "branch": "convert_staticstring_to_string",
-          "revision": "a6c107550adedf09c72f7b0611646aec3f9431cf",
-          "version": null
+          "branch": null,
+          "revision": "10dbfe92d270abdb17699143c0a2eba8bec6f026",
+          "version": "4.0.0"
         }
       },
       {
@@ -42,7 +42,7 @@
         "repositoryURL": "https://github.com/antranapp/TweakPane",
         "state": {
           "branch": "master",
-          "revision": "d9627f8b172d4ae10213c2d8718b128bd67ea322",
+          "revision": "2b5650dc881c6edfddc6c5dfbc50442297ab5ea8",
           "version": null
         }
       }

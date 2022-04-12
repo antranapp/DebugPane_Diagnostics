@@ -92,3 +92,9 @@ private struct ContentView: View {
         }
     }
 }
+
+extension DiagnosticsBlade {
+    public static func setup() {
+        try? DiagnosticsLogger.setup()
+    }
+}
